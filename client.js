@@ -31,6 +31,45 @@ const employees = [
   }
 ];
 
+function bonusCalc(array) {
+  let bonus = [];
+  for (let i = 0; i < array.length; i++) {
+    //for (let a of array) {
+
+    let bonusPercentage = 0;
+    let salaryCap = 0;
+    let total = 0;
+    if (array[i].reviewRating < 2) {
+      bonusPercentage = 0;
+      console.log('it should be 0 (no bonus');
+    } 
+    else if (array[i].reviewRating === 3) {
+      bonusPercentage = .04;
+      console.log('it should be 4')
+    } 
+    else if (array[i].reviewRating === 4) {
+      bonusPercentage = .06;
+      console.log('it should be 6');
+    }
+     else {
+      bonusPercentage = .10;
+      console.log('it should be 10');
+    } 
+    
+    if (array[i].annualSalary > 65000) {
+      salaryCap -= 0.01;
+      
+    }
+    if (array[i].employeeNumber / 1000 >= 1) {
+      salaryCap += .05;
+    }
+    // console.log(bonusPercentage);
+  }
+      total = salaryCap + bonusPercentage
+      if (total >=)
+}
+
+bonusCalc(employees);
 // YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
 
 // This problem is massive! Break the problem down, take small steps, and test as you go.
@@ -39,4 +78,4 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
-console.log( employees );
+
